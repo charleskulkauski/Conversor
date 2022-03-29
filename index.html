@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+                <div class="exibir">
+                <p class="titulo">Conversor Decimal</p>
+                <br>
+                <input type="text" id="entradaDecimal" placeholder="Insira o número decimal">
+                <br>
+                <span id="exibir"></span>
+                <button onclick="binario()">Binário</button>
+                <button onclick="octal()">Octal</button>
+                <button onclick="hexadecimal()">Hexadecimal</button>
+                <button onclick="window.location.reload()">Começar de novo</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+function binario(){
+var decimal = Number(entradaDecimal.value)
+let binario = decimal.toString(2)
+
+exibir.innerHTML = `<b>Conversão para Binário: ${binario}</b><br><br>`
+}
+
+function octal() {
+    var decimal = Number(entradaDecimal.value)
+    let octal = decimal.toString(8)
+    
+    exibir.innerHTML = `<b>Conversão para Octal: ${octal}</b><br><br>`
+}
+
+function hexadecimal() {
+    var decimal = Number(entradaDecimal.value)
+    let hexadecimal = decimal.toString(16)
+
+    exibir.innerHTML = `<b>Conversão para Hexadecimal: ${hexadecimal}</b><br><br>`
+}
+</script>
